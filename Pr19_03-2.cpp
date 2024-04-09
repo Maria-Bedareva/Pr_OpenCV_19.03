@@ -26,7 +26,7 @@ int main()
     Mat gaussImage;
     GaussianBlur(grayImage, gaussImage, Size(3, 3), 0);
     Mat contourImage;
-    Canny(grayImage, contourImage, 50, 200);
+    Canny(gaussImage, contourImage, 50, 200);
     vector<vector<Point> > finalImage;
     vector<Vec4i> hierarchy;
     findContours(contourImage, finalImage, hierarchy, RETR_TREE, CHAIN_APPROX_SIMPLE);
