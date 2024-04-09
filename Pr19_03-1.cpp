@@ -28,7 +28,7 @@ int main()
     waitKey(0);
 
     Mat contourImage;
-    Canny(grayImage, contourImage, 50, 200);
+    Canny(gaussImage, contourImage, 50, 200);
     imshow("Contour Image", contourImage);
     waitKey(0);
 
