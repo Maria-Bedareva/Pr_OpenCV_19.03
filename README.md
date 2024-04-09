@@ -16,7 +16,8 @@
 
 Задание 2:
 ![image](https://github.com/Maria-Bedareva/Pr_OpenCV_19.03/assets/82601289/e6e83635-51db-4892-84c2-344e601b83a2)
-![image](https://github.com/Maria-Bedareva/Pr_OpenCV_19.03/assets/82601289/6204b742-6dce-480c-a2e2-93e474e688e1)
+![image](https://github.com/Maria-Bedareva/Pr_OpenCV_19.03/assets/82601289/edaeb1ad-9460-4a81-ae3e-afe872494d66)
+
 
 
 Задание 3:
