@@ -24,14 +24,14 @@ int main()
     Mat grayImage;
     cvtColor(image, grayImage, COLOR_BGR2GRAY);
     Mat gaussImage;
-    GaussianBlur(grayImage, gaussImage, Size(5, 5), 0);
+    GaussianBlur(grayImage, gaussImage, Size(3, 3), 0);
     Mat contourImage;
     Canny(grayImage, contourImage, 50, 200);
     vector<vector<Point> > finalImage;
     vector<Vec4i> hierarchy;
     findContours(contourImage, finalImage, hierarchy, RETR_TREE, CHAIN_APPROX_SIMPLE);
 
-    Scalar color = Scalar(0, 255, 0);
+    Scalar color = Scalar(0, 0, 255);
     Mat newImage = Mat::zeros(image.size(), CV_8UC3);
     for (size_t i = 0; i < finalImage.size(); i++)
     {
