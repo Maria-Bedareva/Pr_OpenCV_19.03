@@ -31,7 +31,6 @@ int main()
     vector<Vec4i> hierarchy;
     findContours(contourImage, finalImage, hierarchy, RETR_TREE, CHAIN_APPROX_SIMPLE);
 
-    Mat text = Mat::zeros(contourImage.size(), CV_8UC3);
     Scalar color = Scalar(0, 255, 0);
     Mat newImage = Mat::zeros(image.size(), CV_8UC3);
     for (size_t i = 0; i < finalImage.size(); i++)
