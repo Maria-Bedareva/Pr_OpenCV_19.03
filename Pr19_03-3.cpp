@@ -13,7 +13,7 @@ string figure(const vector<Point>& contour) {
         return "Triangle";
     }
     else if (approx.size() == 4) {
-        Rect rect = cv::boundingRect(contour);
+        Rect rect = boundingRect(contour);
         double aspectRatio = static_cast<double>(rect.width) / rect.height;
         if (aspectRatio >= 0.95 && aspectRatio <= 1.05) {
             return "Rectangle";
@@ -48,7 +48,7 @@ int main() {
     findContours(contourImage, contours, RETR_EXTERNAL, CHAIN_APPROX_SIMPLE);
 
     for (size_t i = 0; i < contours.size(); ++i) {
-        drawContours(image, contours, static_cast<int>(i), cv::Scalar(0, 255, 0), 2);
+        drawContours(image, contours, static_cast<int>(i), Scalar(0, 255, 0), 2);
         string shape = figure(contours[i]);
         Moments mu = moments(contours[i]);
         Point center(mu.m10 / mu.m00, mu.m01 / mu.m00);
